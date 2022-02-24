@@ -106,8 +106,8 @@ while(True):
         
     if(time<0):
         time=0   
-    cv2.putText(frame,'Wake up Time !!:'+str(time),(300,height-20), font, 1,(0,0,255),1,cv2.LINE_AA)
-    if(time>10):
+    cv2.putText(frame,'Sleep Time !!:'+str(time/10),(300,height-20), font, 1,(0,0,255),1,cv2.LINE_AA)
+    if(time>50):
         #person is feeling dazzi we will alert :
         cv2.imwrite(os.path.join(path,'image.jpg'),frame)
         try:
